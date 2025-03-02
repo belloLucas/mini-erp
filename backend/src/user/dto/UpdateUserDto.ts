@@ -1,5 +1,4 @@
-import { IsString, IsEmail, IsOptional, IsEnum } from 'class-validator';
-import { UserRole } from '../entities/user.entity';
+import { IsString, IsEmail, IsOptional } from 'class-validator';
 
 export class UpdateUserDto {
   @IsOptional()
@@ -13,8 +12,4 @@ export class UpdateUserDto {
   @IsOptional()
   @IsString()
   readonly password?: string;
-
-  @IsOptional()
-  @IsEnum(UserRole)
-  readonly role?: UserRole;
 }
